@@ -7,6 +7,11 @@
 
 #include <Bounce.h>
 
+const byte numChars = 32;
+char receivedChars[numChars];
+
+boolean newData = false;
+
 // Create Bounce objects for each button.  The Bounce object
 // automatically deals with contact chatter or "bounce", and
 // it makes detecting changes very simple.
@@ -22,6 +27,9 @@ Bounce button8 = Bounce(8, 10);
 Bounce button9 = Bounce(9, 10);
 
 void setup() {
+  Serial5.begin(9600);
+  Serial5.println("<Master is ready>");
+  
   // Configure the pins for input mode with pullup resistors.
   // The pushbuttons connect from each pin to ground.  When
   // the button is pressed, the pin reads LOW because the button
@@ -66,21 +74,27 @@ void loop() {
   //           to low (pressed - button connects pin to ground)
   if (button0.fallingEdge()) {
     Keyboard.println("B0 press");
+    Serial5.print("B0");
   }
   if (button1.fallingEdge()) {
     Keyboard.println("B1 press");
+    Serial5.print("B1");
   }
   if (button2.fallingEdge()) {
     Keyboard.println("B2 press");
+    Serial5.print("B2");
   }
   if (button3.fallingEdge()) {
     Keyboard.println("B3 press");
+    Serial5.print("B3");
   }
   if (button4.fallingEdge()) {
     Keyboard.println("B4 press");
+    Serial5.print("B4");
   }
   if (button5.fallingEdge()) {
     Keyboard.println("B5 press");
+    Serial.write("B5");
   }
   if (button6.fallingEdge()) {
     Keyboard.println("B6 press");
