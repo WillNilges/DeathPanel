@@ -20,11 +20,13 @@ Bounce button1 = Bounce(1, 10);  // 10 = 10 ms debounce time
 Bounce button2 = Bounce(2, 10);  // which is appropriate for
 Bounce button3 = Bounce(3, 10);  // most mechanical pushbuttons
 Bounce button4 = Bounce(4, 10);
-Bounce button5 = Bounce(5, 10);  // if a button is too "sensitive"
-Bounce button6 = Bounce(6, 10);  // to rapid touch, you can
-Bounce button7 = Bounce(7, 10);  // increase this time.
-Bounce button8 = Bounce(8, 10);
-Bounce button9 = Bounce(9, 10);
+Bounce button5 = Bounce(13, 10);  // if a button is too "sensitive"
+Bounce button6 = Bounce(14, 10);  // to rapid touch, you can
+Bounce button7 = Bounce(15, 10);  // increase this time.
+Bounce button8 = Bounce(16, 10);
+Bounce button9 = Bounce(17, 10);
+Bounce button10 = Bounce(18, 10);
+Bounce button11 = Bounce(11, 10);
 
 void setup() {
   Serial5.begin(9600);
@@ -45,11 +47,13 @@ void setup() {
   pinMode(2, INPUT_PULLUP);
   pinMode(3, INPUT_PULLUP);
   pinMode(4, INPUT_PULLUP);
-  pinMode(5, INPUT_PULLUP);
-  pinMode(6, INPUT_PULLUP);  // Teensy++ LED, may need 1k resistor pullup
-  pinMode(7, INPUT_PULLUP);
-  pinMode(8, INPUT_PULLUP);
-  pinMode(9, INPUT_PULLUP);
+  pinMode(13, INPUT_PULLUP);
+  pinMode(14, INPUT_PULLUP);  // Teensy++ LED, may need 1k resistor pullup
+  pinMode(15, INPUT_PULLUP);
+  pinMode(16, INPUT_PULLUP);
+  pinMode(17, INPUT_PULLUP);
+  pinMode(18, INPUT_PULLUP);
+  pinMode(19, INPUT_PULLUP);
 }
 
 void loop() {
@@ -66,6 +70,8 @@ void loop() {
   button7.update();
   button8.update();
   button9.update();
+  button10.update();
+  button11.update();
 
   // Check each button for "falling" edge.
   // Type a message on the Keyboard when each button presses
@@ -94,19 +100,31 @@ void loop() {
   }
   if (button5.fallingEdge()) {
     Keyboard.println("B5 press");
-    Serial.write("B5");
+    Serial5.print("B5");
   }
   if (button6.fallingEdge()) {
     Keyboard.println("B6 press");
+    Serial5.print("B6");
   }
   if (button7.fallingEdge()) {
     Keyboard.println("B7 press");
+    Serial5.print("B7");
   }
   if (button8.fallingEdge()) {
     Keyboard.println("B8 press");
+    Serial5.print("B8");
   }
   if (button9.fallingEdge()) {
     Keyboard.println("B9 press");
+    Serial5.print("B9");
+  }
+  if (button10.fallingEdge()) {
+    Keyboard.println("B10 press");
+    Serial5.print("B10");
+  }
+  if (button11.fallingEdge()) {
+    Keyboard.println("B11 press");
+    Serial5.print("B11");
   }
 
   // Check each button for "rising" edge
