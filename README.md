@@ -4,6 +4,10 @@ The Panel of (the) Deaths! This control panel is designed to allow anyone to int
 The general idea is that we're going to have several co-op™ minigames for people to walk up to the booth and play. Meanwhile, this control panel will be sitting around and allow other passerbys to view game stats, press buttons, and change something in the game! Nobody really knows what exactly this whole thing will turn into, but I thought it was a neat project that I wanted to do well, and so I made this repo. 
 
 ## Images:
+Concept #1, Pretty well-rounded layout, all things considered.
 
 ![CAD Concept](images/deathpanel-concept1.png)
+
+Janky prototype proof of concept. Kinda gross but functional.
+
 ![Panel turned on](images/panel_on_19721.jpg)
