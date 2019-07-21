@@ -6,4 +6,4 @@ The general idea is that we're going to have several co-op™ minigames for peop
 ## Images:
 
 ![CAD Concept](images/deathpanel-concept1.png)
-![Panel turned on](images/panel_on_19719.jpg)
+![Panel turned on](images/panel_on_19721.jpg)
